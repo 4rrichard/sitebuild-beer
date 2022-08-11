@@ -36,11 +36,20 @@ const loadEvent = function () {
 
   const sectionElement = document.querySelector("section");
 
+  // const array = [];
+  // for (let index = 0; index < beers.cards.length; index++) {
+  //   array.push(index + 1);
+  // }
+
+  // array.map((num) => beerCardComponent("", "", "", num));
+
+  let index = 1;
   for (const beer of beers.cards) {
     sectionElement.insertAdjacentHTML(
       "beforeend",
-      beerCardComponent(beer.title, beer.sub, beer.text)
+      beerCardComponent(beer.title, beer.sub, beer.text, index)
     );
+    index++;
   }
 };
 

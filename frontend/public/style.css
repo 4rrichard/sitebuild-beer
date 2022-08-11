@@ -26,6 +26,21 @@ body section {
   gap: 60px;
   justify-content: center;
 }
+@media (min-width: 480px) and (max-width: 950px) {
+  body section {
+    display: inline-flex;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    padding-left: 20px;
+  }
+}
+@media (max-width: 481px) {
+  body section {
+    display: inline-flex;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+  }
+}
 body section .card {
   width: 380px;
   height: auto;
@@ -33,6 +48,12 @@ body section .card {
   padding: 20px;
   background-color: #145434;
   color: #ffeedf;
+}
+@media (max-width: 450px) {
+  body section .card {
+    overflow-wrap: break-word;
+    width: calc(100% - 40px);
+  }
 }
 body section .card .card--number {
   width: 40px;
@@ -86,4 +107,9 @@ body section .details-button .arrow-icon {
   position: absolute;
   right: 5px;
   font-size: 36px;
+}
+body section .details-button:hover {
+  background-color: #145434;
+  color: #ffeedf;
+  border: 2px solid #ffeedf;
 }/*# sourceMappingURL=style.css.map */
